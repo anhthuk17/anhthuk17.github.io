@@ -6,6 +6,7 @@ const socket = io('https://videocall2009.herokuapp.com/');
 
 // socket.on('DANH_SACH_ONLINE', arrUserInfo =>{
 // 	$('#div-chat').show();
+
 // 	$('#div-dang-ky').hide();
 	
 // 	arrUserInfo.forEach( user =>{
