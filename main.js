@@ -7,19 +7,19 @@ const socket = io('https://videocall2009.herokuapp.com/');
 $('#div-chat').hide();
 
 //xirsys
-window.onload = function() {
-         let xhr = new XMLHttpRequest();
-         xhr.onreadystatechange = function($evt){
-            if(xhr.readyState == 4 && xhr.status == 200){
-                let res = JSON.parse(xhr.responseText);
-                console.log("response: ",res);
-            }
-         }
-         xhr.open("PUT", "https://global.xirsys.net/_turn/anhthuk17.github.io", true);
-         xhr.setRequestHeader ("Authorization": "Basic " + btoa("anhthuk17:10f0fe2a-060b-11eb-8e64-0242ac150002") );
-         xhr.setRequestHeader ("Content-Type": "application/json");
-         xhr.send( JSON.stringify({"format": "urls"}) );
-      }:
+// window.onload = function() {
+//          let xhr = new XMLHttpRequest();
+//          xhr.onreadystatechange = function($evt){
+//             if(xhr.readyState == 4 && xhr.status == 200){
+//                 let res = JSON.parse(xhr.responseText);
+//                 console.log("response: ",res);
+//             }
+//          }
+//          xhr.open("PUT", "https://global.xirsys.net/_turn/anhthuk17.github.io", true);
+//          xhr.setRequestHeader ("Authorization": "Basic " + btoa("anhthuk17:10f0fe2a-060b-11eb-8e64-0242ac150002") );
+//          xhr.setRequestHeader ("Content-Type": "application/json");
+//          xhr.send( JSON.stringify({"format": "urls"}) );
+//       }:
 
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
