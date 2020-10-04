@@ -1,5 +1,5 @@
 
-const peer = new Peer({key: 'peerjs', host: 'myvideocall0410.herokuapp.com', secure:true,port:443});
+const peer = new Peer({key: 'peerjs', host: 'myvideocall0410.herokuapp.com', secure:true,port:443, config: customConfig});
 const socket = io('https://videocall2009.herokuapp.com/');
 
 // $('#div-chat').hide();
@@ -105,6 +105,45 @@ const socket = io('https://videocall2009.herokuapp.com/');
 
 
 $('#div-chat').hide();
+
+//xirsys
+/*window.onload = function() {
+         let xhr = new XMLHttpRequest();
+         xhr.onreadystatechange = function($evt){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                let res = JSON.parse(xhr.responseText);
+                console.log("response: ",res);
+            }
+         }
+         xhr.open("PUT", "https://global.xirsys.net/_turn/anhthuk17.github.io", true);
+         xhr.setRequestHeader ("Authorization": "Basic " + btoa("anhthuk17:10f0fe2a-060b-11eb-8e64-0242ac150002") );
+         xhr.setRequestHeader ("Content-Type": "application/json");
+         xhr.send( JSON.stringify({"format": "urls"}) );
+      }:
+*/
+
+let customConfig;
+
+$.ajax({
+  url: "https://service.xirsys.com/ice",
+  data: {
+    ident: "anhthuk17",
+    secret: "10f0fe2a-060b-11eb-8e64-0242ac150002",
+    domain: "anhthuk17.github.io",
+    application: "default",
+    room: "default",
+    secure: 1
+  },
+  success: function (data, status) {
+    // data.d is where the iceServers object lives
+    customConfig = data.d;
+    console.log(customConfig);
+  },
+  async: false
+});
+
+
+
 
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
