@@ -1,5 +1,5 @@
 
-const peer = new Peer({key: 'peerjs', host: 'myvideocall0410.herokuapp.com', secure:true,port:443, config: customConfig});
+const peer = new Peer({key: 'peerjs', host: 'myvideocall0410.herokuapp.com', secure:true,port:443});
 const socket = io('https://videocall2009.herokuapp.com/');
 
 // $('#div-chat').hide();
@@ -107,7 +107,7 @@ const socket = io('https://videocall2009.herokuapp.com/');
 $('#div-chat').hide();
 
 //xirsys
-/*window.onload = function() {
+window.onload = function() {
          let xhr = new XMLHttpRequest();
          xhr.onreadystatechange = function($evt){
             if(xhr.readyState == 4 && xhr.status == 200){
@@ -120,8 +120,9 @@ $('#div-chat').hide();
          xhr.setRequestHeader ("Content-Type": "application/json");
          xhr.send( JSON.stringify({"format": "urls"}) );
       }:
-*/
 
+
+/*
 let customConfig;
 
 $.ajax({
@@ -141,7 +142,7 @@ $.ajax({
   },
   async: false
 });
-
+*/
 
 
 
