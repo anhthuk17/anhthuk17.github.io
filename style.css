@@ -1,0 +1,86 @@
+div#div-dang-ky {
+    width: 36%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+button#btnSignUp {
+    width: 26%;
+    margin-left: 2px;
+}
+.top {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+
+div#div-chat {
+    width: 100%;
+    font-family: segoe ui light;
+    font-size: 17px;
+}
+
+
+.user {
+    margin-left: 6%;
+    width: 19%;
+    font-weight: bold;
+}
+
+.btn-group.calll {
+    width: 60%;
+    margin-left: 10%;
+}
+
+button#btnCall {
+    width: 20%;
+    height: 30%;
+}
+.tren{
+    width: 63%;
+}
+video#localStream {width: 49%;}
+
+.videocall {
+    width: 100%;
+    margin-top: 8%;
+}
+
+video#remoteStream {
+    width: 49%;
+}
+
+p.olusw {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.your_id {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+body #div-dang-ky,#div-chat {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+  body:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /*opacity: 0.5;*/
+    background: url('cherry-tree-1225186_1280.jpg') no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}

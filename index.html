@@ -10,9 +10,9 @@
         <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> -->
         <!-- <script type="text/javascript" src="jquery.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
-        
-        
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <script>
@@ -30,29 +30,41 @@
          xhr.send( JSON.stringify({"format": "urls"}));
       }
   </script>
-
-
-
         <div id="div-chat">
-            <p>Online user:</p>
-            <ul id="ulUser"> 
-            </ul>
-            <h3>Your Id:</h3>
-            <h3 id="my-peer"></h3>
-            <video id="localStream" width="300" controls></video>
-            <br /><br />
-            <video id="remoteStream" width="300" controls></video>
-            <br /><br />
-            <input type="text" id="remoteId" placeholder="Remote ID">
-            <button id="btnCall">Call</button>
+            <div class="your_id">
+                <span>Your Id : </span>
+                <strong id="my-peer"></strong>
+            </div>
+            <div class="top">
+                <div class="user ">
+                    <p class="olusw">Online user:</p>
+                    <ul id="ulUser"> 
+                        
+                    </ul>
+                </div>
+                <div class="tren">
+                    <div class="btn-group calll ">
+                        <input type="text"
+                        class="form-control" name="" id="remoteId" placeholder="Remote ID">
+                      <button id="btnCall" class="btn btn-block btn-primary"><i class="fa fa-phone" aria-hidden="true"> Call</i></button>
+                    </div>
+                    <div class="videocall">
+                        <video id="localStream"  controls></video>
+                        <video id="remoteStream"  controls></video>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         <div id="div-dang-ky">
-            <br /><br />
-            <input type="text" id="txtUsername" placeholder="Enter your username">
-            <button id="btnSignUp">Sign Up</button>
+            <div class="btn-group">
+              <input type="text"
+                class="form-control" name="" id="txtUsername"  placeholder="Enter your username">
+              <button id="btnSignUp" class="btn btn-primary">Sign Up</button>
+            </div>
         </div>
-        
+<script src="main.js"></script>
     </body>
-    <script src="main.js"></script>
+    
 </html>
 
